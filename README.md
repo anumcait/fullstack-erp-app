@@ -56,8 +56,8 @@ fullstack-hr-app/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-org/fullstack-hr-app.git
-   cd fullstack-hr-app
+   git clone https://github.com/your-org/fullstack-erp-app.git
+   cd fullstack-erp-app
 
 Copy and edit environment variables:
 ```bash
