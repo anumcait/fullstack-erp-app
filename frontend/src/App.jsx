@@ -59,9 +59,9 @@ function App() {
         
         <Route path="/" element={<LoginForm />} />
         <Route element={
-          <ProtectedRoute>
+          // <ProtectedRoute>
             <MainLayout />
-          </ProtectedRoute>
+          // </ProtectedRoute>
         }>
         <Route path="/dashboard" element={<DashBoard/>} />
 
