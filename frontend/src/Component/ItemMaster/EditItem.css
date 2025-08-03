@@ -1,0 +1,126 @@
+.item-container {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  color: #1976d2;
+  font-size: 28px;
+  margin-right: 8px;
+}
+
+.item-tabs {
+  margin-bottom: 16px;
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.item-form {
+  padding: 8px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start; /* Top-align labels and inputs */
+  margin-bottom: 16px;
+  flex-wrap: nowrap !important;
+  
+}
+
+.form-row label {
+ width: 120px; 
+  font-size: 0.875rem;
+  margin-right: 8px;
+  white-space: nowrap;
+
+}
+
+.combo-box {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  height: 34px;
+}
+
+.combo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  height: 100%;
+}
+
+.combo-input-section {
+  flex: 1;
+  padding: 0;
+}
+
+.combo-input {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0 8px;
+  font-size: 0.85rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 !important;
+  background: transparent;
+  box-shadow: none;
+}
+
+.combo-input-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.combo-button-section {
+  border-left: 1px solid #ccc;
+}
+
+.combo-add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+/* Fix appearance of textarea */
+.MuiOutlinedInput-root.MuiMultiline-root {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove inner shadow or double box look */
+.MuiOutlinedInput-root.Mui-focused textarea {
+  box-shadow: none !important;
+}
+
+/* Style the textarea directly */
+.MuiOutlinedInput-inputMultiline {
+  padding: 8px !important;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  resize: none;
+}

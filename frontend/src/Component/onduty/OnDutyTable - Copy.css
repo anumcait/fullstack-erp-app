@@ -1,0 +1,107 @@
+.onduty-table-wrapper {
+  margin-top: 20px;
+}
+
+/* Header above table */
+.onduty-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eaf2f8;
+  padding: 10px 15px;
+  border-radius: 4px 4px 0 0;
+}
+
+.onduty-table-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #007bff;
+}
+
+.onduty-table-icons {
+  display: flex;
+  gap: 15px;
+  color: #007bff;
+}
+
+.onduty-table-icons .icon {
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.onduty-table-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Table styling */
+.onduty-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.onduty-table {
+  width: 100%;
+  min-width: 900px; /* or adjust based on your table columns */
+  border-collapse: collapse;
+}
+
+.onduty-table th,
+.onduty-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* Optional: clickable links in table */
+.onduty-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.onduty-table a:hover {
+  text-decoration: underline;
+}
+.preview-icon-cell {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.preview-icon-cell a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .onduty-table-container {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  }
+  .onduty-table-container::after {
+  content: "Swipe to scroll →";
+  font-size: 12px;
+  color: #777;
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 4px;
+}
+  .preview-icon-cell {
+    padding: 6px;
+    height: 10px;
+  } 
+
+  .preview-icon-cell a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+}

@@ -1,0 +1,71 @@
+
+/* Form layout */
+
+.form-group { 
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+
+
+/* Button styling */
+.btn-wrap {
+  flex: 0 0 auto;
+}
+
+.go-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+
+.go-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List header section */
+.form-list-header {
+  background-color: #eaf2f8;
+  padding: 10px 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px 6px 0 0;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #d9534f;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.icons button:hover {
+  color: #c9302c;
+}
+
+.form-path {
+  padding: 10px 15px;
+  font-size: 13px;
+  color: #444;
+}
