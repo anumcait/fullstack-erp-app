@@ -100,95 +100,11 @@ services:
     networks: [hr-network]
     restart: unless-stopped
 
-  # ────────────── PROMETHEUS ──────────────
-  prometheus:
-    image: prom/prometheus
-    container_name: prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus:/etc/prometheus
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── GRAFANA ──────────────
-  grafana:
-    image: grafana/grafana
-    container_name: grafana
-    ports:
-      - "3000:3000"
-    volumes:
-      - grafana_data:/var/lib/grafana
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── NODE EXPORTER ──────────────
-  node-exporter:
-    image: prom/node-exporter
-    container_name: node-exporter
-    ports:
-      - "9100:9100"
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── LOKI ──────────────
-  loki:
-    image: grafana/loki:2.9.3
-    container_name: loki
-    ports:
-      - "3100:3100"
-    command: -config.file=/etc/loki/loki-config.yaml
-    volumes:
-      - ./loki-config.yaml:/etc/loki/loki-config.yaml:ro
-      - loki_data:/loki
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── PROMTAIL ──────────────
-  promtail:
-    image: grafana/promtail:2.9.3
-    container_name: promtail
-    volumes:
-      - /var/log:/var/log
-      - ./promtail-config.yaml:/etc/promtail/config.yaml
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── SWAGGER UI (Optional) ──────────────
-  swagger:
-    image: swaggerapi/swagger-ui
-    container_name: swagger-ui
-    environment:
-      SWAGGER_JSON: /api/swagger.json
-    volumes:
-      - ./backend/swagger.json:/api/swagger.json
-    ports:
-      - "8081:8080"
-    networks: [hr-network]
-    restart: unless-stopped
-
-  # ────────────── NGINX (Proxy) ──────────────
-  nginx:
-    image: nginx:latest
-    container_name: hr-nginx
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro          # ✅ Mount file correctly
-    depends_on:
-      - frontend
-      - backend
-    networks: [hr-network]
-    restart: unless-stopped
-
 # ────────────── Networks & Volumes ──────────────
 networks:
   hr-network:
     driver: bridge
 
-volumes:
-  #pgdata:
-  prometheus_data:
-  grafana_data:
-  loki_data:
-  jenkins_data:
+# volumes:
+#   #pgdata:
+
