@@ -83,6 +83,8 @@ const Sidebar = () => {
             </ul>
           )}
         </li>
+         <li><NavLink to="/onduty" activeClassName="active">Onduty</NavLink></li>
+
       </ul>
     </aside>
   );
