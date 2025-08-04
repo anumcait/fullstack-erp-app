@@ -6,8 +6,9 @@ const Sidebar = () => (
   <aside className="sidebar">
     <ul>
       <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-      <li><NavLink to="/leave-form">Leave Application New</NavLink></li>
-      <li><NavLink to="/leave-report">Leave Report</NavLink></li>
+      <li><NavLink to="/leave">Leave</NavLink></li>
+      {/* <li><NavLink to="/leave-form">Leave</NavLink></li> */}
+      {/* <li><NavLink to="/leave-report">Leave Report</NavLink></li> */}
       <li><NavLink to="/add-employee">Add Employee</NavLink></li>
       <li><NavLink to="/employees">Employee Report</NavLink></li>
 
