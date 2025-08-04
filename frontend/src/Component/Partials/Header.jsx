@@ -89,7 +89,15 @@ const Header = () => {
               </div>
               <div className="menu-item dropdown">
                 INVENTORY
- 
+                  <ul className="dropdown-content">
+                      <li className="has-submenu">
+                      <span className="dropdown-text">Masters</span>
+                      <ul className="submenu">
+                        <li><Link to="/edit-item" className="link-style">Item Master</Link></li>
+                       
+                      </ul>
+                    </li>
+                  </ul>
               </div>
               <div className="menu-item dropdown">
                 QUALITY

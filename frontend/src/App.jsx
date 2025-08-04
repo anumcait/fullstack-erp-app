@@ -38,12 +38,12 @@ function App() {
         }>
         <Route path="/dashboard" element={<DashBoard/>} />
 
-        <Route path="/leave" element={<LeaveDashboard />} />
+
         {/* <Route path="/leave-form" element={<LeaveDashboard />} /> */}
         {/* <Route path="/leave-report" element={<LeaveReport />} /> */}
         <Route path="/employees" element={<EmployeeReportForm />} />
         <Route path="/add-employee" element={<AddEmployeeForm />} />
-
+        <Route path="/leave" element={<LeaveDashboard />} />
         <Route path="/onduty" element={<OnDutyDashboard />} />
         {/* <Route path="/onduty" element={<OnDutyForm />} /> */}
         <Route path="/onduty-preview" element={<OnDutyPreview />} />

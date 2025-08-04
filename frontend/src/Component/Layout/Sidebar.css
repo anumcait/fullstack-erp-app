@@ -1,20 +1,85 @@
+/* Basic Sidebar Styling */
 .sidebar {
-  width: 200px;
-  background: #e6e6e6;
+  width: 250px;
+  background: #f4f4f4;
   padding: 10px;
+  min-height: 100vh; /* Ensure sidebar takes full height */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  position: relative;
 }
+
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0; /* Remove default margin */
 }
+
 .sidebar li {
   margin: 10px 0;
 }
+
 .sidebar a {
   text-decoration: none;
   color: #333;
+  display: block;
+  padding: 5px 0;
 }
+
+.sidebar a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.sidebar .menu-item {
+  position: relative;
+}
+
+.sidebar .menu-item span {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.sidebar .menu-item span:hover {
+  color: #0056b3;
+}
+
+/* Submenu Styles */
+.sidebar .submenu {
+  display: none;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.sidebar .submenu.open {
+  display: block;
+}
+
+.sidebar .submenu li {
+  padding: 5px 0;
+}
+
+/* Arrow indicator for open/closed submenu */
+.sidebar .menu-item span::after {
+  content: '▶'; /* Right arrow */
+  margin-left: 5px;
+  font-size: 0.8em;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar .menu-item.open span::after {
+  transform: rotate(90deg); /* Down arrow when open */
+}
+
+/* Active link styles */
 .sidebar a.active {
   font-weight: bold;
   color: #007bff;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
